@@ -1,11 +1,15 @@
-# Doc D AI Engine
+README.md
 
-The **Doc D AI Engine** is the core intelligence framework behind the Viligans Command ecosystem.  
+`
+
+Doc D AI Engine
+
+The Doc D AI Engine is the core intelligence framework behind the Viligans Command ecosystem.  
 It powers automation, compliance assistance, rural infrastructure tools, and modular AI agents designed to support veterans, small businesses, and trust‑based operations.
 
 ---
 
-## 🚀 Features
+🚀 Features
 
 - Modular AI agent architecture  
 - Compliance and procedural reasoning engine  
@@ -16,4 +20,79 @@ It powers automation, compliance assistance, rural infrastructure tools, and mod
 
 ---
 
-## 🧱 Project Structure (Recommended)
+🧱 Project Structure 
+
+`
+/src
+  /core
+  /agents
+  /pipelines
+  /parsers
+  /services
+  /utils
+
+/docs
+/tests
+/config
+`
+
+---
+
+🛠 Tech Stack (Suggested)
+
+- Python or Node.js  
+- FastAPI / Express  
+- Vector DB (Chroma / Pinecone)  
+- Lightweight rules engine  
+- GitHub Actions for CI/CD  
+
+---
+
+📦 Installation
+
+`
+git clone https://github.com/alawndus/docd-ai-engine.git (github.com in Bing)
+cd docd-ai-engine
+`
+
+---
+
+🧪 Testing
+
+`
+pytest
+`
+
+---
+
+📜 License
+
+MIT License (see LICENSE file)
+
+---
+
+🤝 Contributing
+
+Pull requests welcome.  
+For major changes, open an issue first to discuss what you’d like to modify.
+
+---
+
+🛡 Maintainer
+
+Alawndus L. Davis  
+Viligans Command Corporation  
+DOC D AI — Sentinel Intelligence Framework
+`
+
+
+
+
+
+
+
+
+  
+
+
+
