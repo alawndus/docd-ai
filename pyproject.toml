@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docd-ai"
+version = "0.1.0"
+description = "Minimal scaffold for Doc D AI Engine"
+dependencies = [
+  "fastapi>=0.95.0",
+  "uvicorn[standard]>=0.22.0",
+]
