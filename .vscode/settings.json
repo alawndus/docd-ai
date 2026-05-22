@@ -1,0 +1,4 @@
+{
+    "gitlens.views.formats.commits.label": "${❰ tips|11? ❱➤  }${message}${authorFirst}",
+    "gitlens.views.formats.stashes.label": "${message}${authorFirst}"
+}
