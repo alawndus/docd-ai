@@ -38,7 +38,7 @@ It powers automation, compliance assistance, rural infrastructure tools, and mod
 
 ---
 
-🛠 Tech Stack (Suggested)
+🛠 Tech Stack 
 
 - Python or Node.js  
 - FastAPI / Express  
