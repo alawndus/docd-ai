@@ -48,12 +48,36 @@ It powers automation, compliance assistance, rural infrastructure tools, and mod
 
 ---
 
-📦 Installation
+📦 Installation & Run
 
-`
-git clone https://github.com/alawndus/docd-ai-engine.git (github.com in Bing)
-cd docd-ai-engine
-`
+```bash
+git clone https://github.com/alawndus/docd-ai.git
+cd docd-ai
+```
+
+Copy the example environment and start the app (Linux/macOS):
+
+```bash
+cp .env.example .env
+./scripts/run.sh
+```
+
+On Windows PowerShell:
+
+```powershell
+copy .env.example .env
+.\scripts\run.ps1
+```
+
+You can also use the Makefile shortcuts:
+
+```bash
+make build      # create venv and install deps
+make run        # run uvicorn locally
+make docker-build
+make docker-run
+```
+
 
 ---
 
