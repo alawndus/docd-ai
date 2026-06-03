@@ -1,18 +1,17 @@
-from pydantic import BaseSettings, Field
+from pydantic import ConfigDict, Field
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
     """Application configuration loaded from environment or .env file."""
 
-    app_host: str = Field("127.0.0.1", env="APP_HOST")
-    app_port: int = Field(8000, env="APP_PORT")
-    debug: bool = Field(False, env="DEBUG")
-    log_level: str = Field("info", env="LOG_LEVEL")
-    vector_db_url: str | None = Field(None, env="VECTOR_DB_URL")
+    model_config = ConfigDict(env_file=".env", env_file_encoding="utf-8", case_sensitive=False)
 
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
+    app_host: str = Field("127.0.0.1", validation_alias="APP_HOST")
+    app_port: int = Field(8000, validation_alias="APP_PORT")
+    debug: bool = Field(False, validation_alias="DEBUG")
+    log_level: str = Field("info", validation_alias="LOG_LEVEL")
+    vector_db_url: str | None = Field(None, validation_alias="VECTOR_DB_URL")
 
 
 settings = Settings()
