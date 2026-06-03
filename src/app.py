@@ -1,3 +1,5 @@
+from typing import Any
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -8,7 +10,7 @@ app = FastAPI(title="Doc D AI Engine (minimal)")
 
 
 @app.get("/health")
-async def health():
+async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
@@ -18,7 +20,7 @@ class ParseRequest(BaseModel):
 
 
 @app.post("/parse")
-async def parse_text(req: ParseRequest):
+async def parse_text(req: ParseRequest) -> dict[str, Any]:
     """Parse provided text and return extracted key/value pairs."""
     parsed = parse_key_values(req.text)
     return {"parsed": parsed}
