@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - VECTOR_DB_URL=http://vector-db:8000
+    depends_on:
+      - vector-db
+
+  vector-db:
+    # Chroma is a common local vector DB for development. Replace with your preferred vector DB.
+    image: ghcr.io/chroma-core/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/data
+
+volumes:
+  chroma_data:
