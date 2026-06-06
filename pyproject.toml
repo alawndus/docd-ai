@@ -9,4 +9,15 @@ description = "Minimal scaffold for Doc D AI Engine"
 dependencies = [
   "fastapi>=0.95.0",
   "uvicorn[standard]>=0.22.0",
+  "pydantic>=2.0",
+  "pydantic-settings>=2.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "httpx>=0.24",
+  "mypy>=1.0",
+  "ruff>=0.1.0",
+]
+
