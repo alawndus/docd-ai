@@ -15,10 +15,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt mypy ruff
-      - name: Lint with ruff
       - name: Lint with ruff (check)
-        continue-on-error: run: ruff check src tests
+        run: ruff check src tests
+        continue-on-error: true
       - name: Suggest ruff fixes
-  if: failure()
-  run: |
-    echo "You can run 'ruff check --fix src tests' locally to auto-apply fixable issues."
+        if: failure()
+        run: |
+          echo "You can run 'ruff check --fix src tests' locally to auto-apply fixable issues."
+      - name: Type check with mypy
+        run: mypy src --strict
+      - name: Run tests
+        run: pytest -q
